@@ -30,13 +30,13 @@ today = datetime.datetime.today().strftime('%Y-%m-%d')
 
 
 def get_image_link(): 
-    print("Getting image link...")
+    #print("Getting image link...")
     resource = urllib.request.urlopen(src_url)
     content = resource.read().decode(resource.headers.get_content_charset())
     parser = MyParse()
     parser.feed(content)
     img_link = "https://" + src_domain + '/apod/' + links[0]
-    print(img_link)
+    #print(img_link)
     return img_link
 
 def download_image(): 
@@ -45,7 +45,7 @@ def download_image():
     img_file = output_dir + '/' + today + '.jpg'
     img_link = get_image_link()
     print(img_file)
-    print("Downloading image...")
+    #print("Downloading image...")
     urllib.request.urlretrieve(img_link, img_file)
 
 download_image()
