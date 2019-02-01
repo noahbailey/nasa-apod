@@ -20,3 +20,8 @@ Clone this repository to your home directory. Modify the `nasa-apod.sh` script s
 
 Create a cron job that runs at least once a day. 
 
+### Requirements
+
+* A computer 
+* Python 3.x
+* `crontab` or `cronie` installed and configured
